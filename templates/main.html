@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+    <style>
+            .section {
+              text-align: center;
+              font-size: 3em;
+            }
+            .aboutPage {
+              text-align: center;
+              font-size: 3em;
+              background-image: url('http://127.0.0.1:5000/static/assets/background.jpg');
+              background-repeat: no-repeat;
+              background-size: cover;
+              color: white;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 200%;
+            }
+        
+            .contactPage {
+                text-align: center;
+                font-size: 3em;
+                background-color: rgb(33, 33, 40); 
+            }
+        
+            .portfolioPage {
+                text-align: center;
+                font-size: 3em;
+                background-color: white;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                overflow: hidden;
+                float: right;
+            } 
+
+            li {
+                float: left;
+            }
+
+            li a {
+                display: block;
+                text-align: center;
+                margin: 4px 5px;
+                padding: 0px 0px;
+                text-decoration: none;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 50%;
+            }
+
+            /* Change the link color to #111 (black) on hover */
+            li a:hover {
+                color: rgb(255, 255, 255);
+            }
+
+            li.active a {
+                color: white;
+            }
+
+            a:link {
+                color: rgba(255, 255, 255, 0.35);
+            }
+            a:visited {
+                color:rgba(255, 255, 255, 0.35);
+            }
+            .nav {
+                right: 0;
+                position: fixed; 
+                z-index: 9; 
+            }
+
+            .aboutMe {
+                color: white;
+                font-size: 60%;
+                text-align: center;
+            }
+        
+   </style>
+  <title>Kalle Hallden</title>
+  <link rel="stylesheet" type="text/css" href="https://rawgit.com/alvarotrigo/fullPage.js/dev/src/fullpage.css" />
+</head>
+
+<body>
+    <ul class="nav nav-pills">
+        <li class="active"><a href="/#about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+        <li><a href="/#portfolio">Portfolio</a></li>
+    </ul>
+  <div id="fullpage">
+    <div class="section aboutPage">
+        Kalle Hallden
+        <div class="aboutMe">
+            I am a software developer from 
+            <br>
+            Sweden
+        </div>
+    </div>
+    <div class="section contactPage"></div>
+    <div class="section portfolioPage"></div>
+  </div>
+
+  <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
+  <script>
+        $('.nav li a').on("click", function(e) {
+            $(".nav li").removeClass("active");
+            if (!$(this).parent().hasClass("active")) {
+                $(this).parent().addClass("active");
+            }
+            /*e.preventDefault();*/
+        });
+        </script>
+  <script>
+    new fullpage('#fullpage', {
+        anchors:['about', 'contact', 'portfolio']
+    });
+  </script>
+</body>
+
+</html>
