@@ -14,9 +14,23 @@
               background-image: url('http://127.0.0.1:5000/static/assets/background.jpg');
               background-repeat: no-repeat;
               background-size: cover;
-              color: white;
-              font-family: Arial, Helvetica, sans-serif;
-              font-size: 200%;
+            }
+
+            .aboutPageText {
+                text-align: left;
+                color: white;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 60%;
+                padding-left: 35%;
+            }
+
+            .aboutPageLayer {
+                padding-top: 20%;
+                align-content: center;
+                background-color: black;
+                height: 100%;
+                width: 100%;
+                opacity: 0.5;
             }
         
             .contactPage {
@@ -26,6 +40,7 @@
             }
         
             .portfolioPage {
+                align-content: center;
                 text-align: center;
                 font-size: 3em;
                 background-color: white;
@@ -39,12 +54,14 @@
             } 
 
             li {
+                list-style-type: none;
                 float: left;
+                text-decoration: none;
             }
 
             li a {
                 display: block;
-                text-align: center;
+                text-align: left;
                 margin: 4px 5px;
                 padding: 0px 0px;
                 text-decoration: none;
@@ -53,10 +70,14 @@
             }
 
             /* Change the link color to #111 (black) on hover */
+           .test:hover {
+                color: rgb(33,33,40);
+            }
+
             li a:hover {
                 color: rgb(255, 255, 255);
             }
-
+ 
             li.active a {
                 color: white;
             }
@@ -65,7 +86,7 @@
                 color: rgba(255, 255, 255, 0.35);
             }
             a:visited {
-                color:rgba(255, 255, 255, 0.35);
+                color:rgb(191, 191, 203);
             }
             .nav {
                 right: 0;
@@ -76,8 +97,60 @@
             .aboutMe {
                 color: white;
                 font-size: 60%;
-                text-align: center;
+                text-align: left;
             }
+
+            .contact {
+                color: white;
+                height: 50%;
+                width: 50%;
+                float: right;
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 80%;
+                text-align: left;
+            }
+
+            .links {
+                font-size: 40%;
+                list-style-type: none;
+                text-decoration: none;
+            }
+
+            .social {
+                font-family: Arial, Helvetica, sans-serif;
+                color: white;
+                position: absolute; 
+                bottom: 5px; 
+                list-style-type: none;
+                left: 5px;
+                text-decoration: none;
+            }
+
+            .containerMiddle {
+                bottom: 0px;
+                font-size: 25%;
+                padding-right: 10%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: rgb(33,33,40);
+            }
+
+            .container {
+                padding-top: 10%;
+                padding-right: 10%;
+                font-size: 25%;
+                font-family: Arial, Helvetica, sans-serif;
+                font-weight: bold;
+                color: rgb(33,33,40);
+            }
+
+            .appInfo {
+                font-size: 50%;
+                font-weight: normal;
+                text-align: left;
+            }
+
+            
         
    </style>
   <title>Kalle Hallden</title>
@@ -86,22 +159,87 @@
 
 <body>
     <ul class="nav nav-pills">
-        <li class="active"><a href="/#about">About</a></li>
-        <li><a href="/#contact">Contact</a></li>
-        <li><a href="/#portfolio">Portfolio</a></li>
+        <li class="active"><a class="aboutStyle" href="/#about">About</a></li>
+        <li><a class="contactStyle" href="/#contact">Contact</a></li>
+        <li><a class="portfolioStyle" href="/#portfolio">Portfolio</a></li>
     </ul>
   <div id="fullpage">
     <div class="section aboutPage">
-        Kalle Hallden
-        <div class="aboutMe">
-            I am a software developer from 
-            <br>
-            Sweden
+        <div class="aboutPageLayer">
+            <div class="aboutPageText">
+                    Kalle Hallden
+                    <div class="aboutMe">
+                        I am a software developer from 
+                        <br>
+                        Sweden
+                    </div>
+            </div>
         </div>
     </div>
-    <div class="section contactPage"></div>
-    <div class="section portfolioPage"></div>
+    <div class="section contactPage">
+        <div class="contact">
+            Work with me:
+            <li class= "links">
+                <a href="mailto:halldenkalle@gmail.com" target="_top">Email: halldenkalle@gmail.com</a>
+                <a href="https://youtube.com/kallehallden" target="_blank">YouTube: youtube.com/kallehallden</a>
+                <a href="https://github.com/kallehallden" target="_blank">GitHub: github.com/kallehallden</a>
+            </li>
+        </div>
+    </div>
+    <div class="section portfolioPage">
+        <div>
+                <ul class="container">
+                        <div>Netflix UI Clone</div>
+                        <div>
+                                <img src="http://127.0.0.1:5000/static/assets/netflix.png" width="100" height="190">
+                        </div>
+                        <div class="appInfo">
+                            This is an app I built as part of
+                            <br> a series that I do on my YouTube
+                            <br> called "One Day Builds".
+                            <br> This is where I build something with
+                            <br> code. you can find it <a style="color:rgb(232, 34, 34); text-decoration: none;" href="https://www.youtube.com/watch?v=qFGzT73bjQ8&t" target="_blank">here</a>.
+                        </div>
+                  </ul>
+                  <ul class="containerMiddle">
+                        <div>Notes App</div>
+                        <img src="http://127.0.0.1:5000/static/assets/note_app.png" width="100" height="190">
+                        <div class="appInfo">
+                            This is an app that I am currently 
+                            <br>
+                            working on for my live streams on <a style="color:rgb(100,65,164); text-decoration: none;" href="https://twitch.tv/kallehallden" target="_blank">twitch</a>.
+                        </div>
+                  </ul>
+                  <ul class="container">
+                        <div>Track Advance</div>
+                        <img src="http://127.0.0.1:5000/static/assets/trackadvance.png" width="100" height="190">
+                        <div class="appInfo">
+                            This is an app I built in one week
+                            <br> and published to the 
+                            <a style="color:rgb(118, 221, 122); text-decoration: none;" href="https://play.google.com/store/apps/details?id=com.kallehallden.trackahead&hl=sv" target="_blank">Google play store</a> .
+                            <br> And to the <a style="color:rgb(50, 205, 240); text-decoration: none;" href="https://itunes.apple.com/se/app/trackadvance/id1464248884?l=en&mt=8" target="_blank">Apple app store</a>.
+                            <br> If you want to see the process I posted a video
+                            <br> on YouTube of <a style="color:rgb(232, 34, 34); text-decoration: none;" href="https://www.youtube.com/watch?v=Ssivxgwa6B0" target="_blank">how I built it</a>.
+                        </div>
+                  </ul>
+        </div>
+    </div>
   </div>
+
+        <div>
+          <ul class = "social">
+              <a style="text-decoration: none" href="https://instagram.com/kallehallden" target="_blank">
+                <img src="http://127.0.0.1:5000/static/assets/instagram.png" width="15" height="15">
+             </a>
+             <a style="text-decoration: none" href="https://youtube.com/kallehallden" target="_blank">
+                <img src="http://127.0.0.1:5000/static/assets/youtube.png" width="20" height="15">
+             </a>
+             <a style="text-decoration: none" href="https://twitter.com/kallehallden" target="_blank">
+                <img src="http://127.0.0.1:5000/static/assets/twitter.png" width="18" height="15">
+             </a>
+              kallehallden
+          </ul>
+        </div>
 
   <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.5/fullpage.js"></script>
@@ -116,7 +254,35 @@
         </script>
   <script>
     new fullpage('#fullpage', {
-        anchors:['about', 'contact', 'portfolio']
+        anchors:['about', 'contact', 'portfolio'],
+        onLeave: function(origin, destination, direction){
+		var leavingSection = this;
+        
+		if(destination.index == 2){
+            document.getElementsByClassName('aboutStyle')[0].className = "test";
+            document.getElementsByClassName("contactStyle")[0].className = "test";
+            document.getElementsByClassName("test")[0].style.color = "rgba(33,33,40, 0.35)";
+            document.getElementsByClassName("test")[1].style.color = "rgba(33,33,40, 0.35)";
+            document.getElementsByClassName("portfolioStyle")[0].style.color = "rgb(33,33,40)";
+            document.getElementsByClassName("portfolioStyle")[0].className = "test";
+		} else {
+            if (origin.index == 2 && destination.index != 2) {
+                document.getElementsByClassName('test')[0].className = "aboutStyle";
+                document.getElementsByClassName('test')[0].className = "contactStyle";
+                document.getElementsByClassName('test')[0].className = "portfolioStyle";
+                document.getElementsByClassName("portfolioStyle")[0].style.color = "rgba(255, 255, 255, 0.35)";
+            }
+            if (destination.index == 0) {
+                document.getElementsByClassName("aboutStyle")[0].style.color = "White";
+                document.getElementsByClassName("contactStyle")[0].style.color = "rgba(255, 255, 255, 0.35)";
+            }
+            if (destination.index == 1) {
+                document.getElementsByClassName("contactStyle")[0].style.color = "white";
+                document.getElementsByClassName("aboutStyle")[0].style.color = "rgba(255, 255, 255, 0.35)";
+            }
+        }
+	}
+    
     });
   </script>
 </body>

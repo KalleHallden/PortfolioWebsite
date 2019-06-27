@@ -1,4 +1,4 @@
-body {
+/* body {
    background-color: rgb(33, 33, 40); 
 }
 ul {
@@ -24,7 +24,7 @@ ul {
   }
 
   /* Change the link color to #111 (black) on hover */
-  li a:hover {
+  /* li a:hover {
     color: rgb(255, 255, 255);
   }
 
@@ -39,4 +39,4 @@ ul {
   }
   a:visited {
     color:rgba(255, 255, 255, 0.35);
-  }
+  } */ 
